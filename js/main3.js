@@ -505,7 +505,7 @@ function init(){
 function recorreList(){
 	var countryList = document.getElementById("country-list");
 	for(var i=0; i<countries.length; i++){
-		var html = '<a href="index4.html">'+
+		var html = '<a href="index2.html">'+
 					'<li id="'+i+'">'+
 					'<img src="'+countries[i].imageURL+'" width="30" alt="">'+ countries[i].nombre+'<span class="codigo">'+countries[i].phone_code+'</span>'+
 					'</li>'+'</a>';
