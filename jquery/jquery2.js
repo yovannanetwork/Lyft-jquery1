@@ -1,4 +1,4 @@
-$(document).ready(init());
+$(document).ready(init);
 function init(){
 	var nextButton = $('#caja-rosada');
 	$('#caja-rosada').click(validateNumero);
@@ -6,8 +6,29 @@ function init(){
 	$('#input').keydown(validaNumber);
 	$('#input').keyup(validateLenght);
 	$('#caja-rosada').click(codigo);
-
+	
+ if(localStorageImg() && localStorageCode)	{
+	var imgLocal = localStorage.getItem('srcsPais');
+	var codeLocal = localStorage.getItem('codigo');
+	$('#imgFlag').attr({'src': imgLocal});
+	$('#codigo').text(codeLocal);
+ }
 }
+function localStorageImg(){
+	var ifExist = false;
+	if(localStorage.getItem('srcsPais') != null){
+		ifExist = true;
+	}
+	return ifExist;
+}
+function localStorageCode(){
+	var ifExist = false;
+	if(localStorage.getItem('codigo') != null){
+		ifExist = true;
+	}
+	return ifExist;
+}
+
 function validaNumber(evt)
 {
   if(window.event.keyCode >=48 && window.event.keyCode<=57 || window.event.keyCode ==8){ 
@@ -45,6 +66,6 @@ function codigo(){
 	if(validateNumero()){
 		alert("Llena el campo correctamente");
 	}else{
-		location.href = 'index3.html'
+		location.href = 'index4.html'
 	}
 }

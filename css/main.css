@@ -57,10 +57,10 @@ button a{
 body #codigo{
 	position: absolute;
 	z-index: 2000;
-	padding: 12px 8px;
+	padding: 12px 10px;
 }
 #input{
-	padding: 22px 35px;
+	padding: 22px 50px;
 }
 #caja-rosada{
 	background-color: rgb(248, 69, 186);

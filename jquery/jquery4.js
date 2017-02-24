@@ -5,7 +5,7 @@ $(document).ready(function(){
 	$('#email').keyup(validateEmail);
 	$('#caja-rosada').click(function(){
 	if(validateName()&& validateEmail()&& validateCheck()){
-		alert('hbhdcbhdc');
+		alert('Tiene que llenar todos los campos');
 		
 	}else{
 		location.href = 'map.html';
@@ -46,13 +46,13 @@ function validateEmail(){
 }
 /*function validateCheck(){
 	var valido = false;
-	var ckeck = $('#check');
-	if(!ckeck.checked){
+	var ckeck = $('#check').prop(':ckecked');
+	if(!ckeck){
 		$('#salida2').text("xbxbjd");
-		valido = true;
+		valido = false;
 	}else{
 		$('#salida2').remove();
-		valido = false;
+		valido = true;
 	}
 	return valido;
 }*/
