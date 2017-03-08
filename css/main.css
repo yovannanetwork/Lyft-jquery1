@@ -276,6 +276,10 @@ header .radious{
 	width: 113px;
 	height: 113px;	
 }
+.datos .name{
+	color: #537895;
+	bottom: 10px;
+}
 .botones .boton:first-child{
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
@@ -331,9 +335,15 @@ header .radious{
 }
 
 
+/*-----responsive---*/
 
-
-
+@media screen and (max-width: 480px){
+	
+	.foto{
+		margin: 15% auto;
+	}
+	
+}
 
 
 

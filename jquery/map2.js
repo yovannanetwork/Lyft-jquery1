@@ -24,5 +24,5 @@ function requestEstimate(){
 	});
 }
 function update(_info){
-	$('.stimate').text(_info.estimado.moneda) + $('.stimate').text(_info.estimado.min);
+	$('.stimate').text(_info.estimado.moneda + _info.estimado.min); 
 }

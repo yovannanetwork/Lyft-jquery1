@@ -17,5 +17,5 @@ function update(_name){
 	$('.image').attr('src', _name.conductor.url);
 }
 function updateFinal(_final){
-	$('.final').text(_final.final);
+	$('.final').text(_final.estimado.moneda + _final.final);
 }
