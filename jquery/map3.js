@@ -2,6 +2,7 @@ $(document).ready(init);
 
 function init(){
 	requestCarrera();
+	localStorageGet();
 }
 function requestCarrera(){
 	$.ajax({
@@ -18,4 +19,9 @@ function update(_name){
 }
 function updateFinal(_final){
 	$('.final').text(_final.estimado.moneda + _final.final);
+}
+//  recibiendo el dato de precio final
+function localStorageGet(){
+	var priceFinal = localStorage.getItem('stimate');
+	$('.final').text(priceFinal);
 }

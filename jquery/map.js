@@ -13,5 +13,18 @@ function initMap() {
 		  label: "x",
 		  icon: "img/carrito1.png"
         });
+	rrecorrerList();
 }
 
+function rrecorrerList(){
+	var liLista = $('li');
+	$.each(liLista, function(){
+		$(this).on('click', makeClickLis);		
+	});
+}
+function makeClickLis(evt){
+	var typeCar = $(evt.currentTarget).find('.type-car').text();
+	var imgCar = $(evt.currentTarget).find('img').attr('src');
+	localStorage.setItem('tipoCarro', typeCar);
+	localStorage.setItem('carImagen', imgCar);
+}

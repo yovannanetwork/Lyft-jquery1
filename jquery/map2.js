@@ -14,6 +14,8 @@ function initMap() {
 		  icon: "img/carrito1.png"
         });
 	requestEstimate();
+	localStorageGet();
+	localStoragePrice();
 }
 function requestEstimate(){
 	$.ajax({
@@ -24,5 +26,19 @@ function requestEstimate(){
 	});
 }
 function update(_info){
-	$('.stimate').text(_info.estimado.moneda + _info.estimado.min); 
+	$('.stimate').text(_info.estimado.moneda + _info.estimado.min + ' - '+ _info.estimado.moneda + _info.estimado.max); 
 }
+//   almacenando el nombre del tipo de auto y la imagen
+function localStorageGet(){
+	var typeLocal = localStorage.getItem('tipoCarro');
+	var imgLocal = localStorage.getItem('carImagen');
+	$('#tipo-carro').text(typeLocal);
+	$('#img-carro').attr({'src':imgLocal});
+}
+function localStoragePrice(){
+	$('#get-price').click(function(){
+		var estimadoPrecio = $('.stimate');
+		localStorage.setItem('estimado', estimadoPrecio);
+	});
+}
+ 
